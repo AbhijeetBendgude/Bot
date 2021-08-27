@@ -79,11 +79,29 @@ namespace bot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tell me a joke.
+        /// </summary>
+        internal static string joke_request {
+            get {
+                return ResourceManager.GetString("joke_request", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No joke found.
         /// </summary>
         internal static string no_joke {
             get {
                 return ResourceManager.GetString("no_joke", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Let&apos;s start over.
+        /// </summary>
+        internal static string return_message {
+            get {
+                return ResourceManager.GetString("return_message", resourceCulture);
             }
         }
         
@@ -97,7 +115,7 @@ namespace bot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to hi and welcome to the test bot. You can type something in to go to the buttons adaptive card. It doesn&apos;t matter what..
+        ///   Looks up a localized string similar to hi and welcome to the test bot. You can type something in to go to the submit actions adaptive card. It doesn&apos;t matter what..
         /// </summary>
         internal static string welcome_message {
             get {

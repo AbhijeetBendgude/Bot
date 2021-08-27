@@ -26,13 +26,13 @@ namespace bot.Bots
 
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-            Attachment optionsCard = null;
+            Attachment optionsCard;
 
-            if (turnContext.Activity.Text.Equals(ConstantStrings.return_to_start))
+            if (turnContext.Activity.Text.Equals(ConstantStrings.return_message))
             {
                 optionsCard = _adaptiveCardFactory.CreateTextCard();
             } 
-            else if (turnContext.Activity.Text.Equals(ConstantStrings.get_joke)) 
+            else if (turnContext.Activity.Text.Equals(ConstantStrings.joke_request)) 
             {
                 var joke = await _jokeService.GetJoke();
 
