@@ -123,13 +123,19 @@
   <data name="joke_api_url" xml:space="preserve">
     <value>https://icanhazdadjoke.com/</value>
   </data>
+  <data name="joke_request" xml:space="preserve">
+    <value>Tell me a joke</value>
+  </data>
   <data name="no_joke" xml:space="preserve">
     <value>No joke found</value>
+  </data>
+  <data name="return_message" xml:space="preserve">
+    <value>Let's start over</value>
   </data>
   <data name="return_to_start" xml:space="preserve">
     <value>Clicking here brings back the welcome message</value>
   </data>
   <data name="welcome_message" xml:space="preserve">
-    <value>hi and welcome to the test bot. You can type something in to go to the buttons adaptive card. It doesn't matter what.</value>
+    <value>hi and welcome to the test bot. You can type something in to go to the submit actions adaptive card. It doesn't matter what.</value>
   </data>
 </root>

@@ -16,20 +16,20 @@ namespace bot.Factories
         /// </summary>
         public Attachment CreateOptionsCard()
         {
-            var options = new string[]
+            var options = new Dictionary<string, string>
             {
-                ConstantStrings.get_joke,
-                ConstantStrings.return_to_start
+                { ConstantStrings.get_joke, ConstantStrings.joke_request },
+                { ConstantStrings.return_to_start, ConstantStrings.return_message }
             };
 
             var card_actions = new List<AdaptiveAction>();
 
             foreach (var option in options) 
             {
-                card_actions.Add(new AdaptiveSubmitAction 
+                card_actions.Add(new AdaptiveSubmitAction
                 {
-                    Title = option,
-                    Data = option
+                    Title = option.Key,
+                    Data = option.Value
                 });
             }
 
@@ -75,8 +75,6 @@ namespace bot.Factories
         /// </summary>
         public Attachment CreateCombinationCard(string message)
         {
-            var action = ConstantStrings.return_to_start;
-
             AdaptiveCard card = new(defaultSchema)
             {
                 Body = new List<AdaptiveElement>()
@@ -92,8 +90,8 @@ namespace bot.Factories
                         {
                             new AdaptiveSubmitAction
                             {
-                                Title = action,
-                                Data = action
+                                Title = ConstantStrings.return_to_start,
+                                Data = ConstantStrings.return_message
                             }
                         }
                     }
