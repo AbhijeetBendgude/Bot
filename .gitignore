@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/bot/Properties/ServiceDependencies/alberts-test-chat-bot-as - Web Deploy/profile.arm.json
